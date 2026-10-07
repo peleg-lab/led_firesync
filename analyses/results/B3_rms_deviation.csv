@@ -1,0 +1,7 @@
+pair,rms_deviation,max_abs_deviation
+Tprev vs habituation mean (filt),0.13726583407897636,0.2839537354635152
+Tprev vs habituation mean (raw),0.31832466640671087,0.5121991428708306
+Tprev vs trailing 3-cycle mean,0.0627577407658606,0.12043565042977478
+habituation mean (filt) vs habituation mean (raw),0.20072189568449134,0.23337706126797286
+habituation mean (filt) vs trailing 3-cycle mean,0.08047205064670532,0.18259017328399352
+habituation mean (raw) vs trailing 3-cycle mean,0.26241328969101974,0.4108355806913089

@@ -89,3 +89,29 @@ To wire the LED, connect an Arduino Uno to the breadboard with a wire in port 5 
 Wire the output to a spot on the breadboard prior to the resistance and then wire to the ground after the LED.
 Modify the LED period parameter in the code to be what you are seeking, and then simply upload the code to the Uno and it will flash like a single frontalis.
 There is a small delay before the flashing begins, in which you can set up the experiment, allow for natural period flashes, etc.
+
+## Reproducing the revision analyses (Table 2, Supplementary Figures S4–S6, S8–S10)
+
+The `analyses/` folder contains the scripts that generate the statistics and
+supplementary figures added during peer review. They read the raw flash-timing
+CSVs in `data_paths/` through a shared loader (`analyses/lib/data_loader.py`)
+that re-implements the PRC scope and midpoint-selection rule of
+`helpers/plotting_helpers.py::analyze_firefly_led_synchronization`.
+
+```
+cd analyses
+python scripts/B1_ifi_stats.py                 # Table S2 statistics, Supplementary Fig. S4
+python scripts/B2_pulses_per_ifi.py            # Table 2, Supplementary Fig. S5
+python scripts/B3_predictor_sensitivity.py     # Supplementary Fig. S9
+python scripts/B5_habituation_correlation.py   # Supplementary Fig. S8
+python scripts/B6_locking_ratios.py            # Supplementary Fig. S7
+python scripts/B9_strict_scope_prc.py          # Supplementary Fig. S10 (single-pulse / stratified PRC)
+python scripts/B10_cluster_bootstrap.py        # Supplementary Fig. S6 (trial-level bootstrap CIs)
+```
+
+Each script writes its numerical output to `analyses/results/*.csv` and its
+figure to `analyses/figs/`. `B4_variance_bands.py` is the pooled-cycle
+bootstrap used in the first revision and is superseded by `B10`. Requirements
+are the same as for the main driver (NumPy, SciPy, pandas, Matplotlib).
+The code state used for the second revision is frozen as the tagged release
+`v1.1-R2`.

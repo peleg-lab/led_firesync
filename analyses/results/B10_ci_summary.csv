@@ -1,0 +1,2 @@
+n_points,n_trials,n_boot,sd_min,sd_max,hw_pooled_min,hw_pooled_max,hw_cluster_min,hw_cluster_max,ratio_min,ratio_median,ratio_max,pos_lobe_bins_excluding_1,pos_lobe_bins,neg_lobe_bins_excluding_1,neg_lobe_bins,n_bins_with_cluster_ci_excluding_1,n_bins_with_pooled_ci_excluding_1,frac_phi_pre_ge1
+7584,110,2000,0.25625798642378805,0.7142006805253196,0.040209790791622124,0.14182857327345944,0.047270840458975005,0.1700493167098337,0.9060392568565913,1.177562641562399,1.4310373948347388,10,10,10,11,29,30,0.060126582278481014
