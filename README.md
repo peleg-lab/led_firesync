@@ -115,3 +115,7 @@ bootstrap used in the first revision and is superseded by `B10`. Requirements
 are the same as for the main driver (NumPy, SciPy, pandas, Matplotlib).
 The code state used for the second revision is frozen as the tagged release
 `v1.1-R2`.
+
+## Funding
+
+This work was supported by U.S. National Science Foundation grant 2210628, Research Corporation for Science Advancement grant 28219, and Air Force Research Laboratory award FA8651-25-2-0005.
